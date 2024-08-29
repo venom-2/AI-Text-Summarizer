@@ -51,7 +51,7 @@ function submitData(e) {
         redirect: "follow"
     };
 
-    fetch('http://localhost:3000/summarize', requestOptions)
+    fetch('https://ai-text-summarizer-backend-olive.vercel.app/summarize', requestOptions)
         .then(response => response.text()) // Response will be summarized text
         .then(summary => {
             // Do something with the summary response from the back end API!
