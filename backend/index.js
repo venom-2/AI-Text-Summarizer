@@ -17,7 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 // Serves static files from the 'public' directory
-app.use(express.static('frontend'));
+app.use(express.static('public'));
 
 // Handle POST requests to the '/summarize' endpoint
 
