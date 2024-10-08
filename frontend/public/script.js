@@ -38,7 +38,7 @@ function submitData(e) {
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", ACCESS_TOKEN);
+    myHeaders.append("Authorization", `Bearer ${ACCESS_TOKEN}`);
 
     const raw = JSON.stringify({
         "text_to_summarize": text_to_summarize
@@ -51,7 +51,7 @@ function submitData(e) {
         redirect: "follow"
     };
 
-    fetch('https://ai-text-summarizer-backend-olive.vercel.app/summarize', requestOptions)
+    fetch('https://ai-text-summarizer-backend-90zw.onrender.com/summarize', requestOptions)
         .then(response => response.text()) // Response will be summarized text
         .then(summary => {
             // Do something with the summary response from the back end API!
