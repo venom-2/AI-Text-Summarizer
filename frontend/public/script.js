@@ -4,8 +4,6 @@ const submitButton = document.getElementById("submit-button");
 
 const summarizedTextArea = document.getElementById("summary");
 
-const ACCESS_TOKEN = "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";
-
 textArea.addEventListener("input", verifyTextLength);
 
 submitButton.addEventListener("click", submitData);
@@ -38,7 +36,6 @@ function submitData(e) {
 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", `Bearer ${ACCESS_TOKEN}`);
 
     const raw = JSON.stringify({
         "text_to_summarize": text_to_summarize
